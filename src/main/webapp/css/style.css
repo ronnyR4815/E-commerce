@@ -1,0 +1,180 @@
+body {
+	background-image: url("images/cielo2.jpg");
+	background-color: solid rgba(250, 241, 228, 0.5);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	transition: background-position 0.5s ease;
+	background-position: 0px -50px;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+
+body.scrolled {
+	background-position: 0px calc(-50px + 2 * var(--scroll-position));
+}
+
+header h1 {
+	background-color: #151250;
+	color: white;
+	text-align: center;
+	font-family: arial;
+	width: 100% auto;
+}
+
+nav {
+	display: flex;
+}
+
+nav a {
+	flex: 1; /* Esto hace que cada elemento <a> tenga la misma anchura */
+	text-align: center; /* Esto centra el texto dentro del elemento <a> */
+	padding: 15px;
+	/* Esto agrega un relleno para hacer que el elemento de enlace sea mÃ¡s grande */
+	text-decoration: none; /* Esto elimina la subrayado del enlace */
+	width: 100%;
+	color: black;
+	font-size: 18px;
+	border-radius: 5px;
+	border-left: 1px solid rgb(216, 180, 133);
+	border-right: 1px solid rgb(216, 180, 133);
+}
+
+nav a:hover {
+	background-color: #ddd;
+	border: gray;
+	color: brown;
+}
+
+nav a.active {
+	background-color: rgb(180, 216, 255);
+	color: white;
+}
+
+nav a.active:hover {
+	background-color: #ddd;
+	border: gray;
+	color: grey;
+}
+
+/*
+	div: index.jsp
+/*-----------------------------------------------------------------------*/
+.barra {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+	height: 400px;
+	background-color: #ffe9ca;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contenido {
+	display: flex;
+	align-items: center;
+}
+
+.contenido img {
+	width: 30%;
+	margin: 0 10px;
+}
+
+.contenido p {
+	width: 50%;
+	margin: 0 10px;
+	font-size: 1.2rem;
+	text-align: justify;
+}
+
+/*-----------------------------------------------------------------------*/
+div.formulario {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	align-content: center;
+}
+
+p {
+	font-family: verdana;
+	font-size: 14px;
+	text-align: justify;
+}
+
+img {
+	border-radius: 40px;
+}
+
+.cuadro-registro {
+	margin: 20px;
+	border: solid black 1px;
+	text-align: center;
+	align-content: center;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título */
+.maps {
+    position: relative;
+    width: 800px;
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title-maps {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 24px;
+	color: black;
+}
+
+/* Estilo y animación para el iframe */
+.iframe-maps {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.iframe-maps iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	animation: zoomIn 1s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+footer {
+	overflow: hidden;
+	background-color: #151250;
+	padding: 20px 10px;
+	height: 300px;
+	text-align: center;
+	clear: both;
+}
+
+footer li {
+	list-style: none;
+	font: bold 14px verdana;
+	padding: 10px;
+	display: inline-block;
+	color: white;
+}
